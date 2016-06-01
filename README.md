@@ -33,7 +33,7 @@ Diffs:
 - In-game money:
   - Players can buy mass and energy before each fight.
   - Players can buy a generator before a fight; they add energy to the robot each turn.
-- Generators are statinary, and can be destroyed by missles. Shields can be built (at a cost) and placed in front of generators.
+- Generators are stationary, and can be destroyed by missles. Shields can be built (at a cost) and placed in front of generators.
 
 ### [Version 0.5]
 -

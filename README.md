@@ -12,29 +12,37 @@ Staged game development plan:
 ### [Version 0.1]
 - 2 players only
 - Turn-based
+- Client-side only. Human players take turns using the browser UI on one laptop.
 - &quot;1-D&quot; game: All action takes place on a line between robots, who can't move. No aiming is required.
-- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire up to two per round.
+- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round.
 - One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round.
 - If missle hits robot, robot loses mass and energy.
 - If missle hits shield, shield loses mass.
 
 ### [Version 0.2]
 Diffs:
-- Missle consumes energy and mass to build, then consumes energy to target/fire.
-- Shield absorbs part of a missle impact's energy, which is added to the robot's energy bank. Shields can be rebuilt, costing mass &amp; energy.
+- Server code to network two players (browsers) together
+- Add basic registration, authenticate password-based sign-in
+- Add "Best fighting record" leaderboard
 
 ### [Version 0.3]
+Diffs:
+- Missle consumes energy and mass to build, then consumes energy to target/fire.
+- Can fire at most three missles per round.
+- Shield absorbs part of a missle impact's energy, which is added to the robot's energy bank. Shields can be rebuilt, costing mass &amp; energy.
+
+### [Version 0.4]
 Diffs:
 - &quot;2-D&quot;: missles must be targeted (left/right)
 - A robot can evade a missle by moving left or right, and can move shields left or right, but moving either costs energy, and that energy cost is proportional to the mass being moved.
 - Turns are simultaneous. Players must now guess where to aim missles (straight, left, or right) since the opponent may have decided to move.
 
-### [Version 0.4]
+### [Version 0.5]
 - In-game money:
   - Players can buy mass and energy before each fight.
   - Players can buy a generator before a fight; they add energy to the robot each turn.
 - Generators are stationary, and can be destroyed by missles. Shields can be built (at a cost) and placed in front of generators.
 
-### [Version 0.5]
+### [Version 0.6]
 -
 -

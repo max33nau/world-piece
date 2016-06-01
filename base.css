@@ -45,6 +45,10 @@ header {
   background-color: rgba(4, 4, 4, 1)
 }
 
+.box-shadow-neon {
+  box-shadow: 0 0 50px rgba(4, 250, 5, 1);
+}
+
 /****************************/
 
 

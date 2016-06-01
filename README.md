@@ -14,9 +14,9 @@ Staged game development plan:
 - Turn-based
 - Client-side only. Human players take turns using the browser UI on one laptop.
 - &quot;1-D&quot; game: All action takes place on a line between robots, who can't move. No aiming is required.
-- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round.
-- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round.
-- If missle hits robot, robot loses mass and energy.
+- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round. Only one type of missle can be built (same damage capability).
+- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round. Only one type of shield can be built (same mass / defense capability).
+- If missle hits robot, robot loses mass &amp; energy.
 - If missle hits shield, shield loses mass.
 
 ### [Version 0.2]
@@ -44,5 +44,7 @@ Diffs:
 - Generators are stationary, and can be destroyed by missles. Shields can be built (at a cost) and placed in front of generators.
 
 ### [Version 0.6]
--
--
+- Allow variable-sized shields. Smaller shields cost less to build, position, and move, but absorb less damage.
+- Allow variable-sized missles. Smaller missles cost less to build and target/fire, but do less damage.
+- As a robot looses mass, its building rate reduces (think "less usable muscle"). Its maximum possible shield and missle sizes per round decreases as the robot's mass shrinks.
+- Allow multi-round building. A robot can build a larger shield or missle if it keeps "adding to" the equipment. Allow a maximum size of up to 1.5x the "standard" size.

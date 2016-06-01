@@ -1,0 +1,23 @@
+.robotImage {
+  width: 400px;
+  height: 400px;
+
+}
+
+
+#player1, #player2 {
+  border: 2px solid black;
+}
+
+.text-neon-green {
+  color: rgba(4, 250, 5, 1);
+}
+
+.background-black {
+  background-color: rgba(4, 4, 4, 1)
+}
+
+header {
+  margin-top: 0 !important;
+  padding: 10px !important;
+}

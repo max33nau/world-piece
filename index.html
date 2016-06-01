@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"></meta>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="base.css">
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <title>world-piece</title>
 </head>
 <body>
-  <h1>world-piece</h1>
-  <h2>Version 0.1: Internal Alpha Test</h2>
+  <header class='page-header text-center background-black'>
+    <h1 class='text-neon-green'>world-piece</h1>
+    <h5 class='text-muted'>Version 0.1: Internal Alpha Test</h5>
+  </header>
+  <div class='container'>
+    <div class='row'>
+      <div id='player1' class='col-sm-6 center-block text-center'>
+        <h3> Player One </h3>
+        <img src='http://www.thebostoncalendar.com/system/events/photos/000/009/858/original/Screen_Shot_2014-04-23_at_12.01.59_PM.png?1443858897' class='img-responsive robotImage center-block' />
+      </div>
 
+      <div id='player2' class='col-sm-6 text-center'>
+        <h3> Player Two </h3>
+        <img src='http://orig12.deviantart.net/8c49/f/2010/060/b/8/battle_robot_by_garr0t.jpg' class='img-responsive robotImage center-block'  />
+      </div>
+    </div>
+  </div>
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
   <script src="app.js"></script>
 </body>

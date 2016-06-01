@@ -46,5 +46,5 @@ Diffs:
 ### [Version 0.6]
 - Allow variable-sized shields. Smaller shields cost less to build, position, and move, but absorb less damage.
 - Allow variable-sized missles. Smaller missles cost less to build and target/fire, but do less damage.
-- As a robot looses mass, its building rate reduces (think "less usable muscle"). Its maximum possible shield and missle sizes per round decreases as the robot's mass shrinks.
+- As a robot loses mass, its building rate reduces (think "less usable muscle"). Its maximum possible shield and missle sizes per round decreases as the robot's mass shrinks.
 - Allow multi-round building. A robot can build a larger shield or missle if it keeps "adding to" the equipment. Allow a maximum size of up to 1.5x the "standard" size.

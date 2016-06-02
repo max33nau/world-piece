@@ -13,7 +13,6 @@ function changeTurn(playersTurn) {
   }
 }
 
-
 $('#player1-offense').click(function(){
   console.log('player 1 fired missle');
   changeTurn(2);
@@ -33,3 +32,13 @@ $('#player2-defense').click(function(){
   console.log('player 2 built shield');
   changeTurn(1);
 });
+
+(function(my) {
+  // Private data
+  var d;
+
+  game = {};
+
+
+  my.game = game;
+})(window);

@@ -2,15 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"></meta>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="vendor/favicon.ico" rel="icon" type="image/x-icon" />
+  <script src="https://use.fontawesome.com/ed39a4d8a4.js"></script>
   <title>world-piece</title>
 </head>
 <body>
-  <h1>world-piece</h1>
-  <h2>Version 0.1: Internal Alpha Test</h2>
+  <header class='page-header text-center background-black'>
+    <h1 class='text-neon-green'>world-piece</h1>
+    <h5 class='text-muted'>Version 0.1: Internal Alpha Test</h5>
+  </header>
+  <div class='container'>
+    <div class='row'>
+      <div id='player1' class='col-xs-6 center-block text-center box-shadow-neon'>
+        <h3> Player One </h3>
+        <img src='http://www.thebostoncalendar.com/system/events/photos/000/009/858/original/Screen_Shot_2014-04-23_at_12.01.59_PM.png?1443858897' class='img-responsive robotImage center-block' />
+        <div class='player-moves'>
+          <button id='player1-offense' class='btn btn-danger move'> <i class="fa fa-rocket" aria-hidden="true"></i> Fire Missle </button>
+          <button id='player1-defense' class='btn btn-primary move'><i class="fa fa-shield" aria-hidden="true"></i> Build Shield </button>
+        </div>
+      </div>
 
+<<<<<<< HEAD
+      <div id='player2' class='col-xs-6 text-center'>
+        <h3> Player Two </h3>
+        <img src='http://orig12.deviantart.net/8c49/f/2010/060/b/8/battle_robot_by_garr0t.jpg' class='img-responsive robotImage center-block'  />
+        <div class='player-moves'>
+          <button id='player2-offense' class='btn btn-danger move'>  <i class="fa fa-rocket" aria-hidden="true"></i> Fire Missle </button>
+          <button id='player2-defense' class='btn btn-primary move'><i class="fa fa-shield" aria-hidden="true"></i> Build Shield </button>
+        </div>
+      </div>
+    </div>
+  </div>
+=======
   <div id="board"></div>
 
+>>>>>>> master
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
   <script src="app.js"></script>
 </body>

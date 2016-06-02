@@ -9,6 +9,9 @@ You control a Piece Keeper robot and manage its resources, mass and energy, for 
 ##
 Staged game development plan:
 
+### [Version 0.0]
+- Make sure Alex collaborates nicely, or not at all, as he is not a computer.
+
 ### [Version 0.1]
 - 2 players only
 - Turn-based

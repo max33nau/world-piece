@@ -3,6 +3,8 @@
 // Private data
 var player1 = $('#player1');
 var player2 = $('#player2');
+var robot1 = $('#robot1');
+var robot2 = $('#robot2');
 
 var lifeDOM = [$('#life_P1'), $('#life_P2')];
 
@@ -38,6 +40,8 @@ Life.prototype.shield = function() {
   return false;
 }
 
+
+
 var life = [new Life(), new Life()]; // Array of life "resources" objects, one per player
 console.log('life = ', life);
 
@@ -72,25 +76,39 @@ function buildShield(p) {
   }
 }
 
+function checkLifeStatus() {
+  if(life[1].energy == 0) {
+    robot2.attr('src', 'i/broken-robot-1.jpg');
+  } else if (life[0].energy == 0) {
+    robot1.attr('src', 'i/Destroyed_Robot2.png');
+  } else {
+    console.log('everyone is alive');
+  }
+}
+
 $('#player1-offense').click(function(){
   fireMissle(1);
   statsUpdate(0);
   changeTurn(2);
+  checkLifeStatus();
 });
 
 $('#player1-defense').click(function(){
   buildShield(1);
   changeTurn(2);
+  checkLifeStatus();
 });
 
 $('#player2-offense').click(function(){
   fireMissle(2);
   changeTurn(1);
+  checkLifeStatus();
 });
 
 $('#player2-defense').click(function(){
   buildShield(2);
   changeTurn(1);
+  checkLifeStatus();
 });
 
 var template_life = $('#template_life');

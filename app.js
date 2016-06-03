@@ -1,22 +1,45 @@
-(function(my) {
+//(function(my) {
 
 // Private data
 var player1 = $('#player1');
 var player2 = $('#player2');
 
-var life_P1 = $('#life_P1');
-var life_P2 = $('#life_P2');
+var lifeDOM = [$('#life_P1'), $('#life_P2')];
 
 /*** Robot models ***/
-var massStart = 3;
-var energyStart = 3;
+var massStart   = 16;
+var energyStart = 16;
 
-function makeData() {
+var missleCost_mass   = 1;
+var missleCost_energy = 3;
+var shieldCost_mass   = 3;
+var shieldCost_energy = 1;
+
+function Life() {
   this.mass = massStart;
   this.energy = energyStart;
 }
-var p1_data = new makeData();
-var p2_data = new makeData();
+
+Life.prototype.missle = function() {
+  if ((this.mass >= missleCost_mass) && (this.energy >= missleCost_energy)) {
+    this.mass   -= missleCost_mass;
+    this.energy -= missleCost_energy;
+    return true;
+  }
+  return false;
+}
+
+Life.prototype.shield = function() {
+  if ((this.mass >= shieldCost_mass) && (this.energy >= shieldCost_energy)) {
+    this.mass   -= shieldCost_mass;
+    this.energy -= shieldCost_energy;
+    return true;
+  }
+  return false;
+}
+
+var life = [new Life(), new Life()]; // Array of life "resources" objects, one per player
+console.log('life = ', life);
 
 /*** Game Play ***/
 function changeTurn(playersTurn) {
@@ -31,32 +54,53 @@ function changeTurn(playersTurn) {
   }
 }
 
+function fireMissle(p) {
+  if (life[p - 1].missle()) {
+     console.log('player '+ p + ' fired a missle');
+     statsUpdate(p - 1);
+  } else {
+    console.log('player '+ p + ' can\'t build a missle due to low resources.');
+  }
+}
+
+function buildShield(p) {
+  if (life[p - 1].shield()) {
+     console.log('player '+ p + ' built a shield');
+     statsUpdate(p - 1);
+  } else {
+    console.log('player '+ p + ' can\'t build a shield due to low resources.');
+  }
+}
+
 $('#player1-offense').click(function(){
-  console.log('player 1 fired missle');
+  fireMissle(1);
+  statsUpdate(0);
   changeTurn(2);
 });
 
 $('#player1-defense').click(function(){
-  console.log('player 1 built shield');
+  buildShield(1);
   changeTurn(2);
 });
 
 $('#player2-offense').click(function(){
-  console.log('player 2 fired missle');
+  fireMissle(2);
   changeTurn(1);
 });
 
 $('#player2-defense').click(function(){
-  console.log('player 2 built shield');
+  buildShield(2);
   changeTurn(1);
 });
 
 var template_life = $('#template_life');
 var fillTemplate_life = Handlebars.compile(template_life.html());
-life_P1.html(fillTemplate_life(p1_data));
-life_P2.html(fillTemplate_life(p2_data));
+function statsUpdate(player) {
+  lifeDOM[player].html(fillTemplate_life(life[player]));
+}
+statsUpdate(0);
+statsUpdate(1);
 
-game = {};
-my.game = game;
-
-})(window);
+//game = {};
+//my.game = game;
+//})(window);

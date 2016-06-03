@@ -17,8 +17,8 @@ Staged game development plan:
 - Turn-based
 - Client-side only. Human players take turns using the browser UI on one laptop. [**DONE**]
 - &quot;1-D&quot; game: All action takes place on a line between robots, who can't move. No aiming is required. [**DONE**]
-- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round. Only one type of missle can be built (same damage capability). [** Enforce build limit per round **]
-- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round. Only one type of shield can be built (same mass / defense capability).[** Enforce build limit per round**]
+- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round. Only one type of missle can be built (same damage capability). [**Enforce build limit per round**]
+- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round. Only one type of shield can be built (same mass / defense capability).[**Enforce build limit per round**]
 - If missle hits robot, robot loses mass &amp; energy.
 - If missle hits shield, shield loses mass.
 

@@ -10,15 +10,15 @@ You control a Piece Keeper robot and manage its resources, mass and energy, for 
 Staged game development plan:
 
 ### [Version 0.0]
-- Make sure Alex collaborates nicely, or not at all, as he is not a computer.
+- Make sure Alex collaborates nicely, or not at all, as he is not a computer. [**DONE**]
 
 ### [Version 0.1]
-- 2 players only
+- 2 players only [**DONE**]
 - Turn-based
-- Client-side only. Human players take turns using the browser UI on one laptop.
-- &quot;1-D&quot; game: All action takes place on a line between robots, who can't move. No aiming is required.
-- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round. Only one type of missle can be built (same damage capability).
-- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round. Only one type of shield can be built (same mass / defense capability).
+- Client-side only. Human players take turns using the browser UI on one laptop. [**DONE**]
+- &quot;1-D&quot; game: All action takes place on a line between robots, who can't move. No aiming is required. [**DONE**]
+- One attack method: missle, costs energy and mass to build. Can build up to one per round, and fire at most one per round. Only one type of missle can be built (same damage capability). [**Enforce build limit per round**]
+- One defense method: shield, costs mass + small/medium amount of energy to build. Can build at most one per round. Only one type of shield can be built (same mass / defense capability).[**Enforce build limit per round**]
 - If missle hits robot, robot loses mass &amp; energy.
 - If missle hits shield, shield loses mass.
 
@@ -30,9 +30,9 @@ Diffs:
 
 ### [Version 0.3]
 Diffs:
-- Missle consumes energy and mass to build, then consumes energy to target/fire.
+- Missle consumes energy and mass to build [**DONE**], then consumes energy to target/fire.
 - Can fire at most three missles per round.
-- Shield absorbs part of a missle impact's energy, which is added to the robot's energy bank. Shields can be rebuilt, costing mass &amp; energy.
+- Shield absorbs part of a missle impact's energy, which is added to the robot's energy bank. Shields can be rebuilt, costing mass &amp; energy. Rebuilding costs less than building from scratch (on a incremental "defense capability" basis).
 
 ### [Version 0.4]
 Diffs:

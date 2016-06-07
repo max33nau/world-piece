@@ -9,6 +9,11 @@ header {
 
 /***** PLAYER CONTAINER *****/
 
+.lifeStats {
+  font-size: 2rem;
+  color: blue;
+}
+
 /* player container */
 #player1, #player2 {
   border: 2px solid black;

@@ -6,8 +6,7 @@ A thinking-person's first person shooter game.
 ## Game Scenario &amp; Objective
 You control a Piece Keeper robot and manage its resources, mass and energy, for offense and defense. Your robot fights other Piece Keepers robots, which are controlled by humans and by computers. Your goal is to win your fights by destroying your robot opponents. You start each round with a limited amount of mass and energy. Each attack and each defense consumes mass, energy, or both. When you are out of energy or mass before your opponent runs out, you lose.
 
-##
-Staged game development plan:
+## Staged game development plan:  
 
 ### [Version 0.0]
 - Make sure Alex collaborates nicely, or not at all, as he is not a computer. [**DONE**]
